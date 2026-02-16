@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>MessageWhiz SMS Activity</h3>
+
+Phone Field: <input id="phone"><br><br>
+Message: <textarea id="msg"></textarea><br><br>
+
+<button onclick="sendSMS()">Send Test SMS</button>
+
+<script>
+function sendSMS(){
+  fetch('/sendSMS', {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({
+      phone: document.getElementById('phone').value,
+      message: document.getElementById('msg').value
+    })
+  }).then(r=>r.json()).then(alert);
+}
+</script>
+
+</body>
+</html>

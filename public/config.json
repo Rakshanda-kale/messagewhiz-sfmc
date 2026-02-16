@@ -1,0 +1,12 @@
+{
+    "workflowApiVersion": "1.1",
+    "metaData": {
+      "icon": "https://img.icons8.com/color/96/sms.png",
+      "category": "Custom"
+    },
+    "configurationArguments": {
+      "publish": {},
+      "validate": {},
+      "stop": {}
+    }
+  }
